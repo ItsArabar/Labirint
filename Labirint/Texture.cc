@@ -38,7 +38,7 @@ Texture::Texture(int width, int height) :
 		map_img(width*height/4), rectangle_map(),
 		w_rectagle_map((width/6)/MAP_W), h_rectagle_map((height/6)/MAP_H), countStolbInRectangle(width / MAP_W){
 	wall = std::shared_ptr<SDL_Texture>(
-		IMG_LoadTexture(_renderer.get(), "wall1.jpg"), SDL_DestroyTexture);
+		IMG_LoadTexture(_renderer.get(), "wall.jpg"), SDL_DestroyTexture);
 	if (wall == nullptr)
 		throw std::runtime_error(
 			std::string("Не удалось загрузить текстуру: ")
